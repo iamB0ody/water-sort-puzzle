@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  border: 2pt solid red;
+  margin: 25px auto;
+  width: 90%;
+  height: 90vh;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container .top,
+.container .bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container .cup {
+  cursor: pointer;
+  width: 100px;
+  height: 220px;
+  border: 2pt solid blue;
+  margin: 25px;
+  border-radius: 5px 5px 50px 50px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  transition: 0.2s ease-in-out;
+}
+
+.container .cup span.block {
+  background-color: black;
+  width: 100%;
+  height: calc(100% / 5);
+  display: block;
+  bottom: 0;
+}
+
+.container .cup.selected {
+  transform: translateY(-15%);
+  transition: 0.2s ease-in-out;
+}
